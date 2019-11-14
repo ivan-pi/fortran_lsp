@@ -3,7 +3,7 @@
 #  Usage:                                                             #
 #                                                                     #
 #  Type  make                  to compile all example programs        #
-#  Type  make exampleN         to compile and run the example program #
+#  Type  make progN         to compile and run the example program #
 #                              number N                               #
 #  Type  make clean            to remove all but the generated output #
 #                                                                     #
