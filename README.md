@@ -1,4 +1,5 @@
 # nnls
+
 Non-negative least squares
 
 Some links concerning NNLS:
@@ -19,6 +20,8 @@ Some links concerning NNLS:
 * https://github.com/mutantturkey/nnls_solver
 
 Book is *Solving Least Squares Problems, Charles L. Lawson, Richard J. Hanson, SIAM 1995*. Code is available on NETLIB.
+
+The routines can be compiled with both the gfortran and ifort compilers.
 
 
 

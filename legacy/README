@@ -1,0 +1,34 @@
+This package of  Fortran 77 and Fortran 90 code accompanies
+the SIAM Publications printing of "Solving Least Squares
+Problems," by C. Lawson and R. Hanson.  The routines in the
+package are filed as shown in the list below.  The units
+listed 1.-14. may be compiled and placed in a library. Routine
+G2 is no longer used but is included for completeness.  The
+main program units 15.-18., 20.-21. require this library for
+all external references.  The item 19.  is a data file read
+by program unit PROG4.FOR.  The main program 23., PROG7.F90,
+requires the subprogram 22. or BVLS.F90.
+
+1.   BNDACC.FOR
+2.   BNDSOL.FOR
+3.   DIFF.FOR
+4.   G1.FOR
+5.   G2.FOR
+6.   GEN.FOR
+7.   H12.FOR
+8.   HFTI.FOR
+9.   LDP.FOR
+10.  MFEOUT.FOR
+11.  NNLS.FOR
+12.  QRBD.FOR
+13.  SVA.FOR
+14.  SVDRS.FOR
+15.  PROG1.FOR
+16.  PROG2.FOR
+17.  PROG3.FOR
+18.  PROG4.FOR
+19.  DATA4.DAT
+20.  PROG5.FOR
+21.  PROG6.FOR
+22.  BVLS.F90
+23.  PROG7.F90
