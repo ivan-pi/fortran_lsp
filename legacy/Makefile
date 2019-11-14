@@ -1,11 +1,14 @@
 #######################################################################
 #                                                                     #
+#  Fortran 77 and Fortran 90 code accompanying the                    #
+#  SIAM Publications printing of "Solving Least Squares               #
+#  Problems," by C. Lawson and R. Hanson                              #
+#                                                                     #
 #  Usage:                                                             #
 #                                                                     #
-#  Type  make                  to compile all example programs        #
-#  Type  make progN         to compile and run the example program #
-#                              number N                               #
-#  Type  make clean            to remove all but the generated output #
+#  Type  make                to compile all example programs          #
+#  Type  make progN          to compile the example program number N  #
+#  Type  make clean          to remove all but the source files       #
 #                                                                     #
 #######################################################################
 
