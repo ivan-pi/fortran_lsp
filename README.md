@@ -11,7 +11,7 @@ This package contains the Fortran 77 and Fortran 90 codes accompanying the SIAM 
 * `sva` implements singular value analysis and Levenberg-Marquardt analysis
 * `svdrs` computes the singular value decomposition
 
-Some additional utility routines for performing Householder transformations (`h12`), orthogonal rotations (`g1` and `g2`), and generating random integer sequences (`gen`) are also available. More details concerning the routines can be found in the original work [[1]](https://epubs.siam.org/doi/book/10.1137/1.9781611971217?mobileUi=0).
+Some additional utility routines for performing Householder transformations (`h12`), orthogonal rotations (`g1` and `g2`), and generating random integer sequences (`gen`) are also available. More details concerning the routines can be found in the original work [[1]](https://doi.org/10.1137/1.9781611971217).
 
 ## Modern Fortran interface
 
@@ -31,4 +31,4 @@ call hfti(A,b,x,tau[,krank,rnorm])
 
 ## References
 
-[[1] Lawson, Charles L., and Richard J. Hanson. *Solving least squares problems*. Vol. 15. Siam, 1995.](https://epubs.siam.org/doi/book/10.1137/1.9781611971217?mobileUi=0)
+[[1] Lawson, Charles L., and Richard J. Hanson. *Solving least squares problems*. Vol. 15. Siam, 1995.](https://doi.org/10.1137/1.9781611971217)
