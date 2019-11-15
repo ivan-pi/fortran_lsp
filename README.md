@@ -1,30 +1,34 @@
-# nnls
+# Fortran Routines for Least Squares Problems
 
-Non-negative least squares
+This package contains the Fortran 77 and Fortran 90 codes accompanying the SIAM Publications printing of "Solving Least Squares Problems" by C. Lawson and R. Hanson [1]. The original routines (most of them dating back to 1974!) available from [netlib](https://www.netlib.org/lawson-hanson/all) are:
 
-Some links concerning NNLS:
+* `bndacc` and `bndsol` implement the band-limited sequential algorithm
+* `hfti` solves a least squares problem by Householder transformations
+* `ldp` solves the least distance programming problem
+* `nnls` solves a least squares problem, subject to all variables being nonnegative
+* `qrbd` computes the singular value decomposition of a bidiagonal matrix
+* `bvls` solves a least squares problem, subject to all variables having upper and lower bounds
+* `sva` implements singular value analysis and Levenberg-Marquardt analysis
+* `svdrs` computes the singular value decomposition
 
-* http://eigen.tuxfamily.org/bz_attachmentbase/attachment.cgi?id=380
-* http://eigen.tuxfamily.org/bz/show_bug.cgi?id=655
-* https://en.wikipedia.org/wiki/Non-negative_least_squares
-* https://eigen.tuxfamily.narkive.com/HWEDaiyh/non-negative-least-square-solving
-* https://bugzilla.redhat.com/show_bug.cgi?id=1421433
-* http://ceres-solver.org/index.html
-* https://archive.schillerinstitute.com/fid_97-01/982_orbit_ceres.pdf
-* https://github.com/delucaal/ClassicNNLS.jl
-* https://github.com/hmatuschek/eigen3-nnls
-* https://cran.r-project.org/web/packages/nnls/index.html
-* https://github.com/rdeits/NNLS.jl
-* https://github.com/mlapshin/nnls
-* https://github.com/alexfields/nnls/blob/master/__init__.py
-* https://github.com/mutantturkey/nnls_solver
-* https://www.rdocumentation.org/packages/lsei/versions/1.2-0/topics/nnls
-* https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.nnls.html#scipy.optimize.nnls
+Additional utility routines are available for performing Householder transformations (`h12`), orthogonal rotations (`g1` and `g2`), and generating random integer sequences (`gen`). For more details about these routines please consult the original work [1].
 
-Book is *Solving Least Squares Problems, Charles L. Lawson, Richard J. Hanson, SIAM 1995*. Code is available on NETLIB.
+## Modern Fortran interface
 
-The routines can be compiled with both the gfortran and ifort compilers.
+Due to the limitations of early Fortran dialects, the original routines are unwieldy to use, requiring the user to provide several dimensioning variables and manually allocate scratch space. Nevertheless, the usefulness of these routines has led users to rewrite them in [C](https://github.com/mutantturkey/nnls_solver) and [C++](https://github.com/hmatuschek/eigen3-nnls), port them to [Python](https://github.com/stefanopalmieri/lsqnonneg/blob/master/lsqnonneg.py) and [Julia](https://github.com/rdeits/NNLS.jl), or develop wrappers for languages like [R](https://cran.r-project.org/web/packages/nnls/index.html), [Ruby (through f2c)](https://github.com/mlapshin/nnls) and [Python (SciPy)](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.nnls.html#scipy.optimize.nnls). Ironically, only Fortran developers are stuck with the old legacy interface.
 
+To improve the state of things this package aims to provide updated versions of the original codes. In the meanwhile, the following simplified interfaces are available:
 
+```Fortran
+call nnls(A,b,x[,rnorm,ierr])
 
+call bvls(A,b,bnd,x[,rnorm,ierr])
 
+call ldp(G,h,x[,xnorm,ierr])
+
+call hfti(A,b,x,tau[,krank,rnorm])
+```
+
+## References
+
+[1] Lawson, Charles L., and Richard J. Hanson. *Solving least squares problems*. Vol. 15. Siam, 1995.

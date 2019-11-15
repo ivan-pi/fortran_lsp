@@ -17,9 +17,9 @@
 # compilation and linkage options.
 #----------------------------------------------------------------------
 
-FC=gfortran
-FFLAGS= -Wall -fbacktrace -std=legacy
-FLFLAGS=
+FC = gfortran
+FFLAGS = -Wall -fbacktrace -std=legacy
+FLFLAGS =
 
 PROGRAMS = prog1 prog2 prog3 prog4 prog5 prog6 prog7
 OBJECTS = gen.o hfti.o h12.o diff.o svdrs.o qrbd.o diff.o g1.o mfeout.o bndacc.o bndsol.o ldp.o nnls.o bvls.o
@@ -35,7 +35,6 @@ prog4 = prog4.o sva.o svdrs.o h12.o qrbd.o diff.o g1.o mfeout.o
 prog5 = prog5.o bndacc.o h12.o bndsol.o
 prog6 = prog6.o svdrs.o h12.o qrbd.o diff.o g1.o ldp.o nnls.o
 prog7 = prog7.o bvls.o
-least_squares = least_squares_mod.o $(OBJECTS)
 
 #--------------------------------------------------------------
 # This is the default target.
@@ -60,9 +59,6 @@ prog5 : $(prog5)
 prog6 : $(prog6)
 	$(FC) $(FFLAGS)  -o $@ $(FLFLAGS) $^
 prog7 : $(prog7)
-	$(FC) $(FFLAGS)  -o $@ $(FLFLAGS) $^
-
-least_squares:  $(least_squares)
 	$(FC) $(FFLAGS)  -o $@ $(FLFLAGS) $^
 
 #-------------------------------------------------------------
