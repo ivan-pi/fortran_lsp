@@ -18,6 +18,8 @@ Some links concerning NNLS:
 * https://github.com/mlapshin/nnls
 * https://github.com/alexfields/nnls/blob/master/__init__.py
 * https://github.com/mutantturkey/nnls_solver
+* https://www.rdocumentation.org/packages/lsei/versions/1.2-0/topics/nnls
+* https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.nnls.html#scipy.optimize.nnls
 
 Book is *Solving Least Squares Problems, Charles L. Lawson, Richard J. Hanson, SIAM 1995*. Code is available on NETLIB.
 

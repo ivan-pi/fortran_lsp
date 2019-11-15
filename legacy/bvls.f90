@@ -21,6 +21,8 @@
 !   The BVLS package is an additional item for the reprinting of the book
 !   by SIAM Publications and the distribution of the code package
 !   using netlib and Internet or network facilities.
+!
+!   Nov 2019: modified to use double precision. Ivan Pribec.
 
 !INTERFACE
 !   SUBROUTINE BVLS (A, B, BND, X, RNORM, NSETP, W, INDEX, IERR)
@@ -117,7 +119,7 @@ integer INDEX(:)
 !   Z()     [Scratch]  An M-array (automatic) of working space.
 !   S()     [Scratch]  An N-array (automatic) of working space.
 !
-      real(kind(1E0)), parameter :: ZERO = 0E0, ONE=1E0, TWO = 2E0
+      real(kind(1D0)), parameter :: ZERO = 0D0, ONE=1D0, TWO = 2D0
       real(kind(one)) :: A(:,:), B(:), S(size(A,2)), X(:), W(:),&
                                  Z(size(A,1)), BND(:,:)
       real(kind(one)) ALPHA, ASAVE, CC, EPS, RANGE, RNORM
@@ -587,8 +589,8 @@ SUBROUTINE HTC (P, U, UP)
 !
 !   Construct a Householder transormation.
    INTEGER P
-   REAL(KIND(ONE)) U(:)
-   REAL UP, VNORM
+   REAL(KIND(1.0D0)) U(:)
+   REAL(KIND(1.0D0)) UP, VNORM
    VNORM=NRM2(U(P:SIZE(U)))
    IF(U(P) > ZERO) VNORM=-VNORM
    UP=U(P)-VNORM

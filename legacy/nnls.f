@@ -7,7 +7,7 @@ c  Charles L. Lawson and Richard J. Hanson at Jet Propulsion Laboratory
 c  1973 JUN 15, and published in the book
 c  "SOLVING LEAST SQUARES PROBLEMS", Prentice-HalL, 1974.
 c  Revised FEB 1995 to accompany reprinting of the book by SIAM.
-c  Modified NOV 2019; DUMMY variable should be an array.
+c  Modified NOV 2019; DUMMY variable in call to H12 is an array.
 c
 C     GIVEN AN M BY N MATRIX, A, AND AN M-VECTOR, B,  COMPUTE AN
 C     N-VECTOR, X, THAT SOLVES THE LEAST SQUARES PROBLEM
