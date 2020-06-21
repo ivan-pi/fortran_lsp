@@ -1,0 +1,8 @@
+name = "fortran_lsp"
+version = "1.0"
+author = "Lawson & Hanson"
+license = "unknown"
+maintaner = "ivan.pribec@gmail.com"
+
+[library]
+source-dir = "src"
